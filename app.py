@@ -19,7 +19,7 @@ class TwitterBot:
         email.send_keys(self.username)
         password.send_keys(self.password)
         password.send_keys(Keys.RETURN)
-        time.sleep(3)
+        time.sleep(5)
 
     def like_tweet(self,hastag):
          bot = self.bot
@@ -27,7 +27,7 @@ class TwitterBot:
          time.sleep(3)
          for i in range(1,20):
              bot.execute_script('window.scrollTo(0,document.body.scrollHeight)')
-             time.sleep(3)
+             time.sleep(5)
 
              tweetLinks = [i.get_attribute('href')
              for i in bot.find_elements_by_xpath("//a[@dir='auto']")]
@@ -36,7 +36,7 @@ class TwitterBot:
 
              for link in filteredLinks :
                  bot.get(link)
-                 time.sleep(5)
+                 time.sleep(8)
                  try:
                      bot.find_element_by_xpath("//div[@data-testid='like']").click()
                      time.sleep(10)
