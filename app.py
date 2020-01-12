@@ -45,6 +45,6 @@ class TwitterBot:
 
 
 
-ed = TwitterBot('EMAIL','PASSWORD')
-ed.login()
-ed.like_tweet('INSERT_KEYWORD_HERE')
+arbitraged = TwitterBot('EMAIL','PASSWORD')
+arbitraged.login()
+arbitraged.like_tweet('INSERT_KEYWORD_HERE')
